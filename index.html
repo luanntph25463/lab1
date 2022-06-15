@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <style>
+      :root {
+        --blue: #272f54;
+        --orange: #ca7801;
+        --green: green;
+      }
+
+      .container {
+        max-width: 980px;
+      }
+      .m-auto {
+        margin: auto;
+      }
+      .my-4 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+      .mx-4 {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+      .m-8 {
+        margin: 32px;
+      }
+      .max-w-full {
+        max-width: 100%;
+      }
+      /* ========= Background ======= */
+      .bg-blue {
+        background: var(--blue);
+      }
+      .hover\:bg-blue:hover {
+        background: var(--blue);
+      }
+      .hover\:bg-green:hover {
+        background: var(--green);
+      }
+      .bg-orange {
+        background: var(--orange);
+      }
+      /* ========= Margin ======= */
+      .m-0 {
+        margin: 0;
+      }
+      .m-0 {
+        margin: 0;
+      }
+      .my-8 {
+        margin-top: 32px;
+      }
+      /* ========= Padding ======= */
+      .p-0 {
+        padding: 0;
+      }
+      .p-1 {
+        padding: 4px;
+      }
+      .p-2 {
+        padding: 8px;
+      }
+      .p-3 {
+        padding: 12px;
+      }
+      .p-4 {
+        padding: 16px;
+      }
+      .py-1 {
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+      .py-2 {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      .py-4 {
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+      .px-1 {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+      .px-2 {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      .px-3 {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .px-4 {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      /* ========= Alignment ======= */
+      .text-left {
+        text-align: left;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-right {
+        text-align: right;
+      }
+      /* ========= DISPLAY ======= */
+      .block {
+        display: block;
+      }
+      .flex {
+        display: flex;
+      }
+      .grid {
+        display: grid;
+      }
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .gap-5 {
+        grid-gap: 20px;
+      }
+      .gap-6 {
+        grid-gap: 24px;
+      }
+      .gap-7 {
+        grid-gap: 28px;
+      }
+      .gap-8 {
+        grid-gap: 32px;
+      }
+      .justify-start {
+        justify-content: flex-start;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .justify-end {
+        justify-content: flex-end;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .list-unstyled {
+        list-style: none;
+      }
+      /* ========= COLOR ======= */
+      .text-white {
+        color: #fff;
+      }
+      .text-blue {
+        color: var(--blue);
+      }
+      .text-orange {
+        color: var(--orange);
+      }
+      .text-green {
+        color: var(--green);
+      }
+      /* ========= Underline ======= */
+      .no-underline {
+        text-decoration: none;
+      }
+      .hover\:underline:hover {
+        text-decoration: underline;
+      }
+      /*boder*/
+      .bd-4 {
+        border: 1px solid black;
+      }
+      .bd-3 {
+        border: 1px solid white;
+      }
+      /*border radius*/
+      .bd-radius {
+        border-radius-3: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container m-auto">
+      <header>
+        <div class="text-center bg-blue py-4">
+          <a href="">
+            <img
+              src="https://res.cloudinary.com/kh-ng-cc/image/upload/v1654937127/logo_kvvqln.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </header>
+      <nav>
+        <div class="bg-orange flex justify-between items-center">
+          <ul class="flex m-0 p-0 list-unstyled">
+            <li class="">
+              <a
+                href=""
+                class="
+                  block
+                  no-underline
+                  text-white
+                  p-4
+                  hover:bg-green hover:underline
+                "
+                >Trang Chủ</a
+              >
+            </li>
+            <li class="">
+              <a
+                href=""
+                class="
+                  block
+                  no-underline
+                  text-white
+                  p-4
+                  hover:bg-green hover:underline
+                "
+                >Tuyển Sinh</a
+              >
+            </li>
+            <li class="">
+              <a
+                href=""
+                class="
+                  block
+                  no-underline
+                  text-white
+                  p-4
+                  hover:bg-green hover:underline
+                "
+                >Chương Trình Đào Tạo</a
+              >
+            </li>
+            <li class="">
+              <a
+                href=""
+                class="
+                  block
+                  no-underline
+                  text-white
+                  p-4
+                  hover:bg-green hover:underline
+                "
+                >Góc Tuyển Sinh</a
+              >
+            </li>
+            <li class="">
+              <a
+                href=""
+                class="
+                  block
+                  no-underline
+                  text-white
+                  p-4
+                  hover:bg-green hover:underline
+                "
+                >Tuyển Dụng</a
+              >
+            </li>
+          </ul>
+          <form action="">
+            <input type="text" class="mx-4" />
+            <button class="bd-3 bg-blue text-white px-4">Tìm Kiếm</button>
+          </form>
+        </div>
+      </nav>
+      <div class="banner my-4">
+        <img
+          src="https://res.cloudinary.com/kh-ng-cc/image/upload/v1654937131/banner_srzdmn.jpg"
+          alt=""
+          class="max-w-full"
+        />
+      </div>
+      <div class="news">
+        <h1 class="text-blue">Tin Tức Học Tập</h1>
+        <div class="grid grid-cols-3 gap-5">
+          <div class="bd-4 p-4">
+            <img
+              src="https://res.cloudinary.com/kh-ng-cc/image/upload/v1654937129/img1_hrpjsx.jpg"
+              alt=""
+              class="m-w-full text-center"
+            />
+            <h3>
+              <a
+                href="http://shop934707.vnn.mn/"
+                class="no-underline text-orange"
+                >Vinh danh sinh viên FPT Polytechnic học kỳ summer 2022 Có Trang
+                web bán hàng</a
+              >
+            </h3>
+            <p>
+              Tối ngay 16/06/2018, Cao đẳng FPT Polytechnic Hà Nội đã tổ chức Lễ
+              tôn vinh "Ong vàng Poly",Trang web
+              <a href="http://foursmart.tk/" class="text-6xl">Foursmart.tk</a>
+              tuyên dương Sinh Viên cá nhân và tập thế có thành tích xuất sắc
+              trong học tập cũng như hoạt
+            </p>
+          </div>
+          <div class="bd-4 p-4">
+            <img
+              src="https://res.cloudinary.com/kh-ng-cc/image/upload/v1654937128/img3_dlp1bp.jpg"
+              alt=""
+              class="m-w-full"
+            />
+            <h3>
+              <a href="" class="no-underline text-orange"
+                >Sinh Viên Khối Ngành Kinh Tế Học Cách"Chạm" Vào Cảm xúc</a
+              >
+            </h3>
+            <p>
+              Với Sự Tham Gia Của chuyên gia trong lĩnh vực kinh doanh,chương
+              trình đã thu hút đông đảo sinh viên Cao Đẳng FPT Polytechnic tham
+              dự.Đặc biệt Các bạn sinh viên bị lôi cuốn bởi
+            </p>
+          </div>
+          <div class="bd-4 p-4">
+            <img
+              src="https://res.cloudinary.com/kh-ng-cc/image/upload/v1654937128/img2_z6smgb.jpg"
+              alt=""
+              class="m-w-full"
+            />
+            <h3>
+              <a href="" class="no-underline text-orange"
+                >Sinh Viên FPT Polytechnic trải nghiệm thực tế tại mường thanh
+                Luxury</a
+              >
+            </h3>
+            <p>
+              VỚi Triết Lý Đào Tạo"Thực Học-Thực Nghiệp" Cao Đẳng FPT
+              Polytechnic Đà Nẵng Thường Xuyên Tổ Chức cho Sinh Viên Tham Dự Các
+              Đơn Vị Doanh Nghiệp
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="news">
+        <h1 class="text-blue">Hoạt Động Sinh Viên</h1>
+        <div class="grid grid-cols-3 gap-5">
+          <div class="bd-4 p-4">
+            <img
+              src="https://res.cloudinary.com/kh-ng-cc/image/upload/v1654937129/img1_hrpjsx.jpg"
+              alt=""
+              class="m-w-full text-center"
+            />
+            <h3>
+              <a href="" class="no-underline text-orange"
+                >Vinh danh 295 sinh viên FPT Polytechnic học kỳ Spring 2018</a
+              >
+            </h3>
+            <p>
+              Tối ngay 16/06/2018, Cao đẳng FPT Polytechnic Hà Nội đã tổ chức Lễ
+              tôn vinh "Ong vàng Poly", tuyên dương 295 cá nhân và tập thế có
+              thành tích xuất sắc trong học tập cũng như hoạt
+            </p>
+          </div>
+          <div class="bd-4 p-4">
+            <img
+              src="https://res.cloudinary.com/kh-ng-cc/image/upload/v1654937128/img3_dlp1bp.jpg"
+              alt=""
+              class="m-w-full"
+            />
+            <h3>
+              <a href="" class="no-underline text-orange"
+                >Sinh Viên Khối Ngành Kinh Tế Học Cách"Chạm" Vào Cảm xúc</a
+              >
+            </h3>
+            <p>
+              Với Sự Tham Gia Của chuyên gia trong lĩnh vực kinh doanh,chương
+              trình đã thu hút đông đảo sinh viên Cao Đẳng FPT Polytechnic tham
+              dự.Đặc biệt Các bạn sinh viên bị lôi cuốn bởi
+            </p>
+          </div>
+          <div class="bd-4 p-4">
+            <img
+              src="https://res.cloudinary.com/kh-ng-cc/image/upload/v1654937128/img2_z6smgb.jpg"
+              alt=""
+              class="m-w-full"
+            />
+            <h3>
+              <a
+                href="http://shop934707.vnn.mn/"
+                class="no-underline text-orange"
+                >Vinh danh sinh viên FPT Polytechnic học kỳ summer 2022 Có Trang
+                web bán hàng</a
+              >
+            </h3>
+            <p>
+              VỚi Triết Lý Đào Tạo"Thực Học-Thực Nghiệp" Cao Đẳng FPT
+              Polytechnic Đà Nẵng Thường Xuyên Tổ Chức cho Sinh Viên Tham Dự Các
+              Đơn Vị Doanh Nghiệp
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer class="text-center py-4 bg-blue text-white my-8">
+        Nguyễn Thành Luân
+      </footer>
+    </div>
+  </body>
+</html>
